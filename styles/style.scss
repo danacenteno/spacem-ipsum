@@ -8,18 +8,35 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
+    background-color: aliceblue;
 }
 
 .wrapper {
     text-align: center;
     width: 80%;
     margin: 0 auto;
+    height: 100%;
+    min-height: 85vh;
+}
+
+h1,
+h3 {
+    margin-bottom: 0;
 }
 
 h1 {
     font-family: 'Bungee Inline', cursive;
-    font-size: 3rem;
-    margin-bottom: 0;
+    font-size: 3.5rem;
+    color: navy;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+    margin: 0.75rem 0;
 }
 
 p,
@@ -35,12 +52,14 @@ label {
         display: none;
     }
 
-    .showMe {
-        display: block;
-        padding: 16px;
+    .generated {
+        padding: 8px 16px;
         height: auto;
-        border: 2px solid navy;
-        border-radius: 25px;
+        border: 3px solid navy;
+        background: aliceblue;
+        border-radius: 8px;
+        text-align: left;
+        line-height: 1.5;
     }
 }
 
@@ -74,4 +93,49 @@ footer {
         text-decoration: none;
         color: white;
     }
+}
+
+.switch-field {
+    display: flex;
+    justify-content: center;
+	margin-bottom: 1rem;
+	overflow: hidden;
+}
+
+.switch-field input {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+
+.switch-field label {
+	background-color: navy;
+	color: #fff;
+	font-size: 14px;
+	line-height: 1;
+	text-align: center;
+	padding: 8px 16px;
+	margin-right: -1px;
+	border: 1px solid #fff;
+	transition: all 0.1s ease-in-out;
+}
+
+.switch-field label:hover {
+	cursor: pointer;
+}
+
+.switch-field input:checked + label {
+	background-color: #0099CC;
+	box-shadow: none;
+}
+
+.switch-field label:first-of-type {
+	border-radius: 4px 0 0 4px;
+}
+
+.switch-field label:last-of-type {
+	border-radius: 0 4px 4px 0;
 }
