@@ -180,6 +180,8 @@ label {
   .mainContent .hidden {
     display: none; }
   .mainContent .generated {
+    width: 100%;
+    max-width: 900px;
     padding: 8px 16px;
     height: auto;
     border: 3px solid navy;
